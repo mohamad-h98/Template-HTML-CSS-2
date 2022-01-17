@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css">
+    <title>Quis App</title>
+  </head>
+  <body>
+    <div class="quiz-app">
+      <div class="quiz-info">
+        <div class="category">Category: <span>HTML</span></div>
+        <div class="count">Question Count: <span></span></div>
+      </div>
+      <div class="quiz-area">
+        <h2>Why We Use &lt;br&gt; Element</h2>
+      </div>
+      <div class="answers-area">
+        <div class="answer">
+          <input type="radio" id="answer_1" name="questions" checked/>
+          <label for="answer_1">To Make Text Bold</label>
+        </div>
+        <div class="answer">
+          <input type="radio" id="answer_2" name="questions" />
+          <label for="answer_1">To Make Text Bold</label>
+        </div>
+        <div class="answer">
+          <input type="radio" id="answer_3" name="questions" />
+          <label for="answer_1">To Make Text Bold</label>
+        </div>
+        <div class="answer">
+          <input type="radio" id="answer_4" name="questions" />
+          <label for="answer_1">To Make Text Bold</label>
+        </div>
+      </div>
+      <button class="submit-button">Submit Answer</button>
+      <div class="bullets">
+        <div class="spans"></div>
+        <div class="countdown">
+          <span class="minutes">02</span> :
+          <span class="seconds">45</span>
+        </div>
+      </div>
+      <div class="results">
+      <span class="perfect" >Perfect </span>Your Answer 10 From 10
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
+
+
+<!-- 
+    // Select Elements
+    let countSpan =document.querySelector(".cunt span");
+    let bulletsSpanContatiner = document.querySelector (".bullets .spans");
+
+    // Set Options
+    let currentIndex = 0;
+function getQuestion() {
+
+    let myRequest = new XMLHttpRequest();
+        myRequest.onreadystatechange = function() {
+
+            if(this.resdyState === 4 && this.state === 200) {
+                let questionObject = JSON.parse(this.responseText);
+                let qCount = questionsObject.length;
+
+                // Create Bullets + Set Qustion Cuont
+                createBullet(qCount);
+
+
+                // Add Qustion Data
+                addQuestionData(questionObject[currentIndex], qCount);
+            }
+        };
+
+        myRequest.open("GET","html_questions.json",true);
+        myRequest.send();
+    }
+
+    getQuestion();
+
+    function createBullet(num) { 
+        countSpan.innerHTML = num;
+    }
+
+    // Create Spanish
+    for (let i =0; i< num ; i++) {
+        // Create Bullet
+        let theBullet = document.createElement("span");
+
+        if (i === 0) {
+            theBullet.className = "no";
+        }
+        // Append Bullets To Main Bullet Container
+        bulletsSpanContainer.appendChild(theBullet);
+    }
+
+
+    function addQuestionData(obj, count){
+         console.log(obj);
+         console.log(count);
+    }
+
+
+
+
+
+
+
+    [
+    {
+        "tittle": "Why We Use <br> Element",
+        "answer_1": "To Make Text Bold",
+        "answer_2": "To Make Text Italic",
+        "answer_3": "To Add Breakline",
+        "answer_4": "To Create Horizontal line",
+        "right_answer": "To Add Breakline"
+    },
+    {
+        "tittle": "Why We Use <br> Element2",
+        "answer_1": "To Make Text Bold2",
+        "answer_2": "To Make Text Italic2",
+        "answer_3": "To Add Breakline2",
+        "answer_4": "To Create Horizontal line2",
+        "right_answer": "To Add Breakline2"
+    },
+    {
+        "tittle": "Why We Use <br> Element3",
+        "answer_1": "To Make Text Bold3",
+        "answer_2": "To Make Text Italic3",
+        "answer_3": "To Add Breakline3",
+        "answer_4": "To Create Horizontal line3",
+        "right_answer": "To Add Breakline3"
+    },
+    {
+        "tittle": "Why We Use <br> Element4",
+        "answer_1": "To Make Text Bold4",
+        "answer_2": "To Make Text Italic4",
+        "answer_3": "To Add Breakline4",
+        "answer_4": "To Create Horizontal line4",
+        "right_answer": "To Add Breakline4"
+    },
+    {
+        "tittle": "Why We Use <br> Element5",
+        "answer_1": "To Make Text Bold5",
+        "answer_2": "To Make Text Italic5",
+        "answer_3": "To Add Breakline5",
+        "answer_4": "To Create Horizontal line5",
+        "right_answer": "To Add Breakline5"
+    },
+    {
+        "tittle": "Why We Use <br> Element6",
+        "answer_1": "To Make Text Bold6",
+        "answer_2": "To Make Text Italic6",
+        "answer_3": "To Add Breakline6",
+        "answer_4": "To Create Horizontal line6",
+        "right_answer": "To Add Breakline6"
+    },
+    {
+        "tittle": "Why We Use <br> Element7",
+        "answer_1": "To Make Text Bold7",
+        "answer_2": "To Make Text Italic7",
+        "answer_3": "To Add Breakline7",
+        "answer_4": "To Create Horizontal line7",
+        "right_answer": "To Add Breakline7"
+    },
+    {
+        "tittle": "Why We Use <br> Element8",
+        "answer_1": "To Make Text Bold8",
+        "answer_2": "To Make Text Italic8",
+        "answer_3": "To Add Breakline8",
+        "answer_4": "To Create Horizontal line8",
+        "right_answer": "To Add Breakline8"
+    },
+    {
+        "tittle": "Why We Use <br> Element9",
+        "answer_1": "To Make Text Bold9",
+        "answer_2": "To Make Text Italic9",
+        "answer_3": "To Add Breakline9",
+        "answer_4": "To Create Horizontal line9",
+        "right_answer": "To Add Breakline9"
+    }
+
+]
+-->
